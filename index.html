@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Routine project contract review for renewable energy developers. Option agreements, easements, NDAs and consultant agreements, with attorney sign-off on every markup.">
+<meta property="og:title" content="Grid Counsel AI">
+<meta property="og:description" content="Routine project contract review for renewable energy developers. Option agreements, easements, NDAs and consultant agreements, with attorney sign-off on every markup.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231E4A4F%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M3%205.5h18%22/%3E%3Cpath%20d%3D%22M6%205.5v8.5M12%205.5v11.5M18%205.5v8.5%22/%3E%3Ccircle%20cx%3D%226%22%20cy%3D%2216.2%22%20r%3D%222.1%22/%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2216.2%22%20r%3D%222.1%22/%3E%3Cpath%20d%3D%22M9.6%2019.2h4.8%22/%3E%3C/svg%3E">
+<title>Grid Counsel AI | Contract review for renewable energy developers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,500&display=swap">
+<style>
+/* Layout: slim header, aerial image, centered pitch; then a sample marked-up page with margin notes, the contract types with short descriptions, four steps, the network tease and intake. Sections alternate white and a pale tint. */
+:root {
+  --bg: #FFFFFF;
+  --soft: #F3F6F6;
+  --paper: #FFFFFF;
+  --ink: #22292B;
+  --muted: #5D676B;
+  --rule: #DFE4E4;
+  --accent: #1E4A4F;
+  --accent-hover: #143539;
+  --on-accent: #FFFFFF;
+  --strike: #A8322B;
+  --amber: #8A5A06;
+
+  --f-text: "Source Sans 3", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --f-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141A1B; --soft: #192022; --paper: #212A2C; --ink: #DDE3E3; --muted: #9BA6A8; --rule: #2E3739;
+    --accent: #8CC3C6; --accent-hover: #AAD5D7; --on-accent: #102022;
+    --strike: #E8948C; --amber: #E2B467;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141A1B; --soft: #192022; --paper: #212A2C; --ink: #DDE3E3; --muted: #9BA6A8; --rule: #2E3739;
+  --accent: #8CC3C6; --accent-hover: #AAD5D7; --on-accent: #102022;
+  --strike: #E8948C; --amber: #E2B467;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 1.0625rem/1.65 var(--f-text);
+}
+@media (min-width: 700px) { body { font-size: 1.125rem; } }
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--accent-hover); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+.wrap {
+  max-width: 1040px;
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 700px) {
+  .wrap {
+    padding-left: max(32px, env(safe-area-inset-left, 0px));
+    padding-right: max(32px, env(safe-area-inset-right, 0px));
+  }
+}
+
+h1, h2 { font-family: var(--f-serif); font-weight: 600; color: var(--ink); text-wrap: balance; }
+h2 { font-size: clamp(1.45rem, 1.25rem + .8vw, 1.8rem); line-height: 1.25; }
+
+/* Header */
+.head-row { display: flex; align-items: center; gap: 1.5rem; padding-block: .95rem; }
+.brand { color: var(--ink); text-decoration: none; font-family: var(--f-serif); font-weight: 600; font-size: 1.2rem; white-space: nowrap; }
+.brand:hover { color: var(--ink); }
+.nav { display: flex; gap: 1.6rem; margin-left: auto; font-size: .95rem; }
+.nav a { color: var(--muted); text-decoration: none; }
+.nav a:hover { color: var(--ink); text-decoration: underline; }
+@media (max-width: 640px) { .nav .wide { display: none; } }
+
+/* Image */
+.field { height: clamp(200px, 34vw, 380px); background: #CBB993; overflow: hidden; }
+.field canvas { display: block; width: 100%; height: 100%; }
+
+/* Pitch */
+.pitch { padding-block: clamp(2.75rem, 6vw, 4.25rem) clamp(3.25rem, 7vw, 5rem); text-align: center; }
+.pitch-inner { display: flex; flex-direction: column; align-items: center; gap: 1.1rem; }
+h1 { font-size: clamp(2rem, 1.4rem + 2.5vw, 3rem); line-height: 1.14; letter-spacing: -0.005em; max-width: 46rem; }
+.sub { color: var(--muted); max-width: 38rem; }
+.actions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .9rem 1.6rem; margin-top: .6rem; }
+.btn {
+  display: inline-block;
+  padding: .85rem 1.6rem;
+  border-radius: 2px;
+  background: var(--accent); color: var(--on-accent);
+  font: 600 .85rem/1.2 var(--f-text);
+  letter-spacing: .12em; text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color .15s ease;
+}
+.btn:hover { background: var(--accent-hover); color: var(--on-accent); }
+
+/* Sections */
+.section { padding-block: clamp(3.5rem, 8vw, 5.25rem); }
+.section.tint { background: var(--soft); }
+.section-head { text-align: center; display: flex; flex-direction: column; align-items: center; gap: .6rem; margin-bottom: 2.5rem; }
+.section-head p { color: var(--muted); max-width: 36rem; }
+
+/* Sample markup */
+.markup {
+  display: grid;
+  grid-template-columns: minmax(0, 40rem) minmax(0, 14rem);
+  column-gap: 2rem;
+  justify-content: center;
+}
+.page-bg { grid-column: 1; grid-row: 1 / 5; background: var(--paper); border: 1px solid var(--rule); border-radius: 2px; }
+.doc-head {
+  grid-column: 1; grid-row: 1;
+  display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .25rem 1rem;
+  padding: 1.25rem 1.75rem 0;
+}
+.doc-title { font-family: var(--f-serif); font-weight: 600; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; }
+.sample { font-style: italic; font-size: .85rem; color: var(--muted); }
+.cl { grid-column: 1; padding: .9rem 1.75rem; font-family: var(--f-serif); font-size: 1rem; line-height: 1.7; }
+.cl-1 { grid-row: 2; }
+.cl-2 { grid-row: 3; }
+.sec-ref { font-weight: 600; }
+del { color: var(--strike); text-decoration: line-through; text-decoration-thickness: 1.5px; }
+ins { color: var(--accent); text-decoration: underline double; text-underline-offset: 3px; }
+.mark { font-family: var(--f-text); font-size: .68rem; font-weight: 600; color: var(--accent); }
+.note { grid-column: 2; position: relative; padding-top: 1rem; font-size: .88rem; line-height: 1.5; color: var(--muted); }
+.note-1 { grid-row: 2; }
+.note-2 { grid-row: 3; }
+.note::before { content: ""; position: absolute; left: -2rem; top: 1.75rem; width: 1.6rem; border-top: 1px dashed var(--rule); }
+.note b { display: block; font-weight: 600; color: var(--accent); font-size: .8rem; }
+.issues { grid-column: 1; grid-row: 4; margin: .5rem 1.75rem 0; padding: .9rem 0 1.4rem; border-top: 1px solid var(--rule); }
+.issues-title { font-weight: 600; font-size: .95rem; margin-bottom: .35rem; }
+.issues li { display: grid; grid-template-columns: 4.4rem minmax(0, 1fr) auto; gap: .75rem; align-items: baseline; padding-block: .3rem; font-size: .95rem; }
+.sev { font-size: .74rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.sev.high { color: var(--strike); }
+.sev.med { color: var(--amber); }
+.ref { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 900px) {
+  .markup { display: block; max-width: 40rem; margin-inline: auto; background: var(--paper); border: 1px solid var(--rule); border-radius: 2px; }
+  .page-bg { display: none; }
+  .doc-head { padding: 1.1rem 1.1rem 0; }
+  .cl { padding: .85rem 1.1rem .5rem; }
+  .note { padding: 0 1.1rem .6rem 2rem; }
+  .note::before { left: 1.1rem; top: .7rem; width: .6rem; }
+  .issues { margin: .5rem 1.1rem 0; }
+}
+@media (max-width: 480px) {
+  .issues li { grid-template-columns: minmax(0, 1fr) auto; row-gap: 0; }
+  .issues li .sev { grid-column: 1 / -1; }
+}
+
+/* Contract types */
+.defs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 3rem;
+  max-width: 54rem; margin-inline: auto;
+}
+.defs > div { padding-block: 1.1rem; border-top: 1px solid var(--rule); min-width: 0; }
+.defs dt { font-family: var(--f-serif); font-weight: 600; font-size: 1.05rem; line-height: 1.4; margin-bottom: .25rem; }
+.defs dd { color: var(--muted); font-size: .98rem; }
+@media (max-width: 680px) { .defs { grid-template-columns: minmax(0, 1fr); } }
+
+/* Steps */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 60rem; margin-inline: auto;
+  text-align: center;
+}
+.steps li { display: flex; flex-direction: column; align-items: center; gap: .35rem; min-width: 0; }
+.step-n { font-family: var(--f-serif); font-size: 1.6rem; line-height: 1; color: var(--accent); }
+.steps h3 { font-size: 1.05rem; font-weight: 600; margin-top: .4rem; }
+.steps p { color: var(--muted); font-size: .97rem; max-width: 16rem; }
+@media (max-width: 860px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem 2rem; } }
+@media (max-width: 500px) { .steps { grid-template-columns: minmax(0, 1fr); } }
+
+/* Beyond */
+.beyond { max-width: 40rem; margin-inline: auto; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+.dash { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem 2.5rem; width: 100%; }
+.dash li { position: relative; padding-left: 1.2rem; min-width: 0; }
+.dash li::before { content: "\2013"; position: absolute; left: 0; color: var(--accent); }
+@media (max-width: 560px) { .dash { grid-template-columns: minmax(0, 1fr); } }
+.next { font-family: var(--f-serif); font-style: italic; text-align: center; }
+
+/* Contact */
+.contact { display: flex; flex-direction: column; align-items: center; gap: 1.1rem; text-align: center; }
+.email { font-family: var(--f-serif); font-weight: 600; font-size: clamp(1.5rem, 1.2rem + 1.3vw, 2rem); overflow-wrap: anywhere; }
+.email a { color: var(--ink); text-decoration: none; }
+.email a:hover { color: var(--accent); }
+.copy { padding: .4rem .9rem; border: 1px solid var(--rule); border-radius: 2px; background: transparent; color: var(--ink); font: 400 .9rem/1.3 var(--f-text); cursor: pointer; }
+.copy:hover { border-color: var(--muted); }
+.fine { font-size: .92rem; color: var(--muted); }
+
+/* Footer */
+.site-foot { border-top: 1px solid var(--rule); padding-block: 2.25rem 2.75rem; font-size: .82rem; color: var(--muted); }
+.foot-inner { display: flex; flex-direction: column; align-items: center; gap: .55rem; text-align: center; }
+.foot-inner p { max-width: 44rem; }
+.adv { font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); font-size: .72rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
+}
+</style>
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="#top">Grid Counsel AI</a>
+    <nav class="nav" aria-label="Primary">
+      <a class="wide" href="#sample">Sample markup</a>
+      <a class="wide" href="#review">What we review</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="field" id="field">
+    <canvas id="field-canvas" role="img" aria-label="Aerial view of a solar farm with a substation and a battery storage yard"></canvas>
+  </div>
+
+  <section class="pitch">
+    <div class="wrap pitch-inner">
+      <h1>Routine project contracts, marked up from the developer's side.</h1>
+      <p class="sub">We review the agreements that pile up between site control and notice to proceed. Options and leases, easements, NDAs, consultant agreements. You get a redline and an issues list, and an attorney in our network signs off on every markup.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Start a review</a>
+        <a href="#sample">See a sample markup</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tint" id="sample">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What comes back to you</h2>
+        <p>A redline against developer-side positions, notes on why each change matters, and a prioritized issues list.</p>
+      </div>
+      <figure class="markup" aria-label="Sample markup of an option to lease agreement">
+        <div class="page-bg" aria-hidden="true"></div>
+        <div class="doc-head">
+          <span class="doc-title">Option to Lease Agreement</span>
+          <span class="sample">Sample markup</span>
+        </div>
+        <p class="cl cl-1"><span class="sec-ref">2.1&ensp;Option Term.</span> The Option shall expire three (3) years after the Effective Date<ins>, subject to two (2) extensions of one (1) year each upon written notice to Owner and payment of the Extension Fee</ins>.<sup class="mark">1</sup></p>
+        <p class="note note-1"><b>Note 1</b>Interconnection studies routinely run past three years. Build the extensions in now.</p>
+        <p class="cl cl-2"><span class="sec-ref">9.3&ensp;Assignment.</span> Optionee shall not assign this Agreement without Owner's prior written consent, which <del>may be withheld in Owner's sole discretion</del> <ins>shall not be unreasonably withheld, conditioned or delayed; provided that no consent is required for an assignment to an Affiliate of Optionee or a collateral assignment to any Financing Party</ins>.<sup class="mark">2</sup></p>
+        <p class="note note-2"><b>Note 2</b>Lenders and tax equity investors will require a collateral assignment without landowner consent.</p>
+        <div class="issues">
+          <p class="issues-title">Issues list</p>
+          <ul>
+            <li><span class="sev high">High</span><span>Assignment requires consent in Owner's sole discretion</span><span class="ref">&sect; 9.3</span></li>
+            <li><span class="sev med">Medium</span><span>No extension right on a three-year option term</span><span class="ref">&sect; 2.1</span></li>
+            <li><span class="sev med">Medium</span><span>Decommissioning security due in full at COD</span><span class="ref">&sect; 14.2</span></li>
+          </ul>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="review">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What we review</h2>
+        <p>Most of these agreements outlast the project's first owner, and every one of them gets read again in diligence.</p>
+      </div>
+      <dl class="defs">
+        <div><dt>Option and lease agreements</dt><dd>Option terms and extensions, rent and escalators, decommissioning security, assignment to financing parties.</dd></div>
+        <div><dt>Easements and crossings</dt><dd>Access, collection line and gen-tie easements, plus pipeline, rail and utility crossings.</dd></div>
+        <div><dt>NDAs and exclusivity letters</dt><dd>Mutual and one-way NDAs, LOIs, exclusivity periods and the rights to walk away.</dd></div>
+        <div><dt>Consultant MSAs and SOWs</dt><dd>Environmental, survey, geotech and interconnection consultants. Scope, IP and liability caps.</dd></div>
+        <div><dt>Estoppels and SNDAs</dt><dd>Landowner and lender deliverables that need to be clean before financing closes.</dd></div>
+        <div><dt>Road use and host agreements</dt><dd>County road use, good neighbor and community benefit agreements.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section tint" id="process">
+    <div class="wrap">
+      <div class="section-head"><h2>How it works</h2></div>
+      <ol class="steps">
+        <li><span class="step-n">1</span><h3>Tell us about the deal</h3><p>Give us the counterparty and project first so we can clear conflicts. Then send the draft.</p></li>
+        <li><span class="step-n">2</span><h3>We mark it up</h3><p>A redline against developer-side positions, flagging what will cause trouble in financing.</p></li>
+        <li><span class="step-n">3</span><h3>An attorney signs off</h3><p>An attorney in our network reviews, edits and approves every markup.</p></li>
+        <li><span class="step-n">4</span><h3>You pass it along</h3><p>The issues list is written so your development team can read it too.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="beyond">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Beyond routine review</h2>
+        <p>Some deals need more than a markup. Through our attorney network we can also take on:</p>
+      </div>
+      <div class="beyond">
+        <ul class="dash">
+          <li>PPAs, VPPAs and RA agreements</li>
+          <li>EPC, BESS supply and LTSAs</li>
+          <li>Project M&amp;A: MIPAs, PSAs, APAs</li>
+          <li>Tax equity and project finance</li>
+        </ul>
+        <p class="next">Coming next: term sheet to closing, in one workspace.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tint" id="contact">
+    <div class="wrap contact">
+      <h2>Send us a contract</h2>
+      <p class="email"><a href="mailto:legal@gridcounsel.ai?subject=Contract%20review%20request" id="intake-email">legal@gridcounsel.ai</a></p>
+      <button type="button" class="copy" id="copy-email">Copy address</button>
+      <p class="fine">Include the counterparty name, the project and the document type.<br>Please hold confidential documents until we confirm conflicts are clear.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-inner">
+    <p class="adv">Attorney Advertising</p>
+    <p>Grid Counsel AI is a technology platform, not a law firm. Legal services are provided by independent, licensed attorneys in the Grid Counsel AI attorney network, each admitted in the jurisdictions identified in their engagement letter. Contacting Grid Counsel AI or sending a document does not create an attorney-client relationship; an engagement begins only when you and the reviewing attorney sign an engagement letter.</p>
+    <p>&copy; 2026 Grid Counsel AI</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-email');
+  var el = document.getElementById('intake-email');
+  if (!btn || !el) return;
+  function selectText() {
+    try {
+      var r = document.createRange();
+      r.selectNodeContents(el);
+      var s = window.getSelection();
+      s.removeAllRanges();
+      s.addRange(r);
+      btn.textContent = 'Address selected';
+    } catch (e) {}
+  }
+  btn.addEventListener('click', function () {
+    var text = el.textContent.trim();
+    try {
+      navigator.clipboard.writeText(text).then(function () {
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = 'Copy address'; }, 1800);
+      }, selectText);
+    } catch (e) { selectText(); }
+  });
+})();
+
+/* Aerial solar field, drawn rather than photographed so the page has no outside image to license. */
+(function () {
+  var wrap = document.getElementById('field');
+  var cv = document.getElementById('field-canvas');
+  if (!wrap || !cv || !cv.getContext) return;
+
+  function rng(seed) {
+    return function () {
+      seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+      var t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+
+  function panels(c, r, x0, y0, bw, bh, pitch, depth) {
+    for (var y = y0 + 4; y + depth < y0 + bh - 3; y += pitch) {
+      var x = x0 + 4;
+      while (x < x0 + bw - 6) {
+        var len = Math.min(34 + r() * 10, x0 + bw - 4 - x);
+        if (len < 8) break;
+        c.fillStyle = 'rgba(92, 74, 48, .28)';
+        c.fillRect(x + .6, y + depth, len, Math.max(1, depth * .35));
+        c.fillStyle = '#2C3B4C';
+        c.fillRect(x, y, len, depth);
+        c.fillStyle = 'rgba(150, 175, 205, .45)';
+        c.fillRect(x, y, len, Math.max(.7, depth * .2));
+        x += len + 2.5;
+      }
+    }
+  }
+
+  function storage(c, x0, y0, bw, bh) {
+    c.fillStyle = '#BDB3A0';
+    c.fillRect(x0 + 6, y0 + 6, bw - 12, bh - 12);
+    var cw = 15, ch = 6, gx = 6, gy = 9;
+    for (var y = y0 + 14; y + ch < y0 + bh - 12; y += ch + gy) {
+      for (var x = x0 + 14; x + cw < x0 + bw - 12; x += cw + gx) {
+        c.fillStyle = 'rgba(80, 70, 55, .35)';
+        c.fillRect(x + 1, y + ch, cw, 2);
+        c.fillStyle = '#EEEDE8';
+        c.fillRect(x, y, cw, ch);
+      }
+    }
+  }
+
+  function substation(c, x0, y0, bw, bh) {
+    var w = Math.min(bw - 20, 120), h = Math.min(bh - 20, 80);
+    var x = x0 + (bw - w) / 2, y = y0 + (bh - h) / 2;
+    c.fillStyle = '#B4AFA4';
+    c.fillRect(x, y, w, h);
+    c.strokeStyle = '#6A6D70'; c.lineWidth = 1;
+    c.strokeRect(x + .5, y + .5, w - 1, h - 1);
+    c.fillStyle = '#5B5F63';
+    for (var i = 0; i < 4; i++) c.fillRect(x + 12 + i * (w - 24) / 4, y + 12, 8, h - 24);
+    c.fillStyle = '#E4E2DC';
+    c.fillRect(x + w - 26, y + h - 22, 18, 12);
+  }
+
+  function draw() {
+    var w = wrap.clientWidth, h = wrap.clientHeight;
+    if (!w || !h) return;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+    var c = cv.getContext('2d');
+    c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var r = rng(11);
+
+    var g = c.createLinearGradient(0, 0, w, h);
+    g.addColorStop(0, '#D4C4A2'); g.addColorStop(1, '#C3AF88');
+    c.fillStyle = g; c.fillRect(0, 0, w, h);
+    for (var i = 0; i < (w * h) / 70; i++) {
+      c.fillStyle = r() < .5 ? 'rgba(110, 90, 60, .10)' : 'rgba(255, 250, 235, .14)';
+      var s = r() * 2 + .5;
+      c.fillRect(r() * w, r() * h, s, s);
+    }
+
+    var small = w < 600;
+    var pitch = small ? 5.5 : 7.5, depth = small ? 3.2 : 4.4;
+    var road = small ? 7 : 11;
+    var bwBase = Math.max(small ? 120 : 170, w / 5.2);
+    var bhBase = Math.max(small ? 80 : 120, h / 2.4);
+
+    c.save();
+    c.translate(w / 2, h / 2);
+    c.rotate(-0.08);
+    var W = w * 1.35, H = h * 1.7;
+    c.translate(-W / 2, -H / 2);
+
+    var cols = [], x = 0;
+    while (x < W) { var bw = bwBase * (.8 + r() * .45); cols.push([x, bw]); x += bw + road; }
+    var rows = [], y = 0;
+    while (y < H) { var bh = bhBase * (.85 + r() * .35); rows.push([y, bh]); y += bh + road; }
+
+    c.fillStyle = '#E2D6BA';
+    cols.forEach(function (cl) { c.fillRect(cl[0] + cl[1], 0, road, H); });
+    rows.forEach(function (rw) { c.fillRect(0, rw[0] + rw[1], W, road); });
+
+    var midC = Math.floor(cols.length / 2), midR = Math.floor(rows.length / 2);
+    rows.forEach(function (rw, ri) {
+      cols.forEach(function (cl, ci) {
+        var x0 = cl[0], y0 = rw[0], bw = cl[1], bh = rw[1];
+        if (ri === midR && ci === midC + 1) { storage(c, x0, y0, bw, bh); return; }
+        if (ri === midR - 1 && ci === midC + 1) { substation(c, x0, y0, bw, bh); return; }
+        if (r() < .05) return;
+        panels(c, r, x0, y0, bw, bh, pitch, depth);
+      });
+    });
+    c.restore();
+
+    var v = c.createLinearGradient(0, 0, 0, h);
+    v.addColorStop(0, 'rgba(255, 255, 255, .06)');
+    v.addColorStop(1, 'rgba(40, 30, 15, .10)');
+    c.fillStyle = v; c.fillRect(0, 0, w, h);
+  }
+
+  draw();
+  var pending = 0, lastW = wrap.clientWidth;
+  window.addEventListener('resize', function () {
+    if (pending) return;
+    pending = requestAnimationFrame(function () {
+      pending = 0;
+      if (wrap.clientWidth !== lastW) { lastW = wrap.clientWidth; draw(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
