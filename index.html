@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#EDF1EE">
 <meta name="description" content="Routine project contract review for renewable energy developers. Option agreements, easements, NDAs and consultant agreements, with attorney sign-off on every markup.">
 <meta property="og:title" content="Grid Counsel AI">
 <meta property="og:description" content="Routine project contract review for renewable energy developers. Option agreements, easements, NDAs and consultant agreements, with attorney sign-off on every markup.">
@@ -15,12 +16,12 @@
 <style>
 /* Layout: slim header, aerial image, centered pitch; then a sample marked-up page with margin notes, the contract types with short descriptions, four steps, the network tease and intake. Sections alternate white and a pale tint. */
 :root {
-  --bg: #FFFFFF;
-  --soft: #F3F6F6;
-  --paper: #FFFFFF;
+  --bg: #EDF1EE;
+  --soft: #E3E9E5;
+  --paper: #FBFCFB;
   --ink: #22292B;
-  --muted: #5D676B;
-  --rule: #DFE4E4;
+  --muted: #56625F;
+  --rule: #D2DBD6;
   --accent: #1E4A4F;
   --accent-hover: #143539;
   --on-accent: #FFFFFF;
@@ -86,8 +87,8 @@ h2 { font-size: clamp(1.45rem, 1.25rem + .8vw, 1.8rem); line-height: 1.25; }
 @media (max-width: 640px) { .nav .wide { display: none; } }
 
 /* Image */
-.field { height: clamp(200px, 34vw, 380px); background: #CBB993; overflow: hidden; }
-.field canvas { display: block; width: 100%; height: 100%; }
+.field { height: clamp(220px, 36vw, 440px); background: #6E8FB8; overflow: hidden; }
+.field img { display: block; width: 100%; height: 100%; max-width: 100%; object-fit: cover; object-position: center 30%; }
 
 /* Pitch */
 .pitch { padding-block: clamp(2.75rem, 6vw, 4.25rem) clamp(3.25rem, 7vw, 5rem); text-align: center; }
@@ -230,8 +231,8 @@ ins { color: var(--accent); text-decoration: underline double; text-underline-of
 </header>
 
 <main id="top">
-  <div class="field" id="field">
-    <canvas id="field-canvas" role="img" aria-label="Aerial view of a solar farm with a substation and a battery storage yard"></canvas>
+  <div class="field">
+    <img src="hero.jpg" width="2400" height="933" alt="Rows of solar panels in the California desert, with mountains behind">
   </div>
 
   <section class="pitch">
@@ -260,7 +261,7 @@ ins { color: var(--accent); text-decoration: underline double; text-underline-of
         <p class="cl cl-1"><span class="sec-ref">2.1&ensp;Option Term.</span> The Option shall expire three (3) years after the Effective Date<ins>, subject to two (2) extensions of one (1) year each upon written notice to Owner and payment of the Extension Fee</ins>.<sup class="mark">1</sup></p>
         <p class="note note-1"><b>Note 1</b>Interconnection studies routinely run past three years. Build the extensions in now.</p>
         <p class="cl cl-2"><span class="sec-ref">9.3&ensp;Assignment.</span> Optionee shall not assign this Agreement without Owner's prior written consent, which <del>may be withheld in Owner's sole discretion</del> <ins>shall not be unreasonably withheld, conditioned or delayed; provided that no consent is required for an assignment to an Affiliate of Optionee or a collateral assignment to any Financing Party</ins>.<sup class="mark">2</sup></p>
-        <p class="note note-2"><b>Note 2</b>Lenders and tax equity investors will require a collateral assignment without landowner consent.</p>
+        <p class="note note-2"><b>Note 2</b>Lenders and tax equity investors will generally prefer a collateral assignment that doesn't need landowner consent.</p>
         <div class="issues">
           <p class="issues-title">Issues list</p>
           <ul>
@@ -334,7 +335,7 @@ ins { color: var(--accent); text-decoration: underline double; text-underline-of
   <div class="wrap foot-inner">
     <p class="adv">Attorney Advertising</p>
     <p>Grid Counsel AI is a technology platform, not a law firm. Legal services are provided by independent, licensed attorneys in the Grid Counsel AI attorney network, each admitted in the jurisdictions identified in their engagement letter. Contacting Grid Counsel AI or sending a document does not create an attorney-client relationship; an engagement begins only when you and the reviewing attorney sign an engagement letter.</p>
-    <p>&copy; 2026 Grid Counsel AI</p>
+    <p>&copy; 2026 Grid Counsel AI &middot; Header photo: Jesse Pluim, U.S. Bureau of Land Management (public domain)</p>
   </div>
 </footer>
 
@@ -361,133 +362,6 @@ ins { color: var(--accent); text-decoration: underline double; text-underline-of
         setTimeout(function () { btn.textContent = 'Copy address'; }, 1800);
       }, selectText);
     } catch (e) { selectText(); }
-  });
-})();
-
-/* Aerial solar field, drawn rather than photographed so the page has no outside image to license. */
-(function () {
-  var wrap = document.getElementById('field');
-  var cv = document.getElementById('field-canvas');
-  if (!wrap || !cv || !cv.getContext) return;
-
-  function rng(seed) {
-    return function () {
-      seed |= 0; seed = seed + 0x6D2B79F5 | 0;
-      var t = Math.imul(seed ^ seed >>> 15, 1 | seed);
-      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
-      return ((t ^ t >>> 14) >>> 0) / 4294967296;
-    };
-  }
-
-  function panels(c, r, x0, y0, bw, bh, pitch, depth) {
-    for (var y = y0 + 4; y + depth < y0 + bh - 3; y += pitch) {
-      var x = x0 + 4;
-      while (x < x0 + bw - 6) {
-        var len = Math.min(34 + r() * 10, x0 + bw - 4 - x);
-        if (len < 8) break;
-        c.fillStyle = 'rgba(92, 74, 48, .28)';
-        c.fillRect(x + .6, y + depth, len, Math.max(1, depth * .35));
-        c.fillStyle = '#2C3B4C';
-        c.fillRect(x, y, len, depth);
-        c.fillStyle = 'rgba(150, 175, 205, .45)';
-        c.fillRect(x, y, len, Math.max(.7, depth * .2));
-        x += len + 2.5;
-      }
-    }
-  }
-
-  function storage(c, x0, y0, bw, bh) {
-    c.fillStyle = '#BDB3A0';
-    c.fillRect(x0 + 6, y0 + 6, bw - 12, bh - 12);
-    var cw = 15, ch = 6, gx = 6, gy = 9;
-    for (var y = y0 + 14; y + ch < y0 + bh - 12; y += ch + gy) {
-      for (var x = x0 + 14; x + cw < x0 + bw - 12; x += cw + gx) {
-        c.fillStyle = 'rgba(80, 70, 55, .35)';
-        c.fillRect(x + 1, y + ch, cw, 2);
-        c.fillStyle = '#EEEDE8';
-        c.fillRect(x, y, cw, ch);
-      }
-    }
-  }
-
-  function substation(c, x0, y0, bw, bh) {
-    var w = Math.min(bw - 20, 120), h = Math.min(bh - 20, 80);
-    var x = x0 + (bw - w) / 2, y = y0 + (bh - h) / 2;
-    c.fillStyle = '#B4AFA4';
-    c.fillRect(x, y, w, h);
-    c.strokeStyle = '#6A6D70'; c.lineWidth = 1;
-    c.strokeRect(x + .5, y + .5, w - 1, h - 1);
-    c.fillStyle = '#5B5F63';
-    for (var i = 0; i < 4; i++) c.fillRect(x + 12 + i * (w - 24) / 4, y + 12, 8, h - 24);
-    c.fillStyle = '#E4E2DC';
-    c.fillRect(x + w - 26, y + h - 22, 18, 12);
-  }
-
-  function draw() {
-    var w = wrap.clientWidth, h = wrap.clientHeight;
-    if (!w || !h) return;
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
-    var c = cv.getContext('2d');
-    c.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var r = rng(11);
-
-    var g = c.createLinearGradient(0, 0, w, h);
-    g.addColorStop(0, '#D4C4A2'); g.addColorStop(1, '#C3AF88');
-    c.fillStyle = g; c.fillRect(0, 0, w, h);
-    for (var i = 0; i < (w * h) / 70; i++) {
-      c.fillStyle = r() < .5 ? 'rgba(110, 90, 60, .10)' : 'rgba(255, 250, 235, .14)';
-      var s = r() * 2 + .5;
-      c.fillRect(r() * w, r() * h, s, s);
-    }
-
-    var small = w < 600;
-    var pitch = small ? 5.5 : 7.5, depth = small ? 3.2 : 4.4;
-    var road = small ? 7 : 11;
-    var bwBase = Math.max(small ? 120 : 170, w / 5.2);
-    var bhBase = Math.max(small ? 80 : 120, h / 2.4);
-
-    c.save();
-    c.translate(w / 2, h / 2);
-    c.rotate(-0.08);
-    var W = w * 1.35, H = h * 1.7;
-    c.translate(-W / 2, -H / 2);
-
-    var cols = [], x = 0;
-    while (x < W) { var bw = bwBase * (.8 + r() * .45); cols.push([x, bw]); x += bw + road; }
-    var rows = [], y = 0;
-    while (y < H) { var bh = bhBase * (.85 + r() * .35); rows.push([y, bh]); y += bh + road; }
-
-    c.fillStyle = '#E2D6BA';
-    cols.forEach(function (cl) { c.fillRect(cl[0] + cl[1], 0, road, H); });
-    rows.forEach(function (rw) { c.fillRect(0, rw[0] + rw[1], W, road); });
-
-    var midC = Math.floor(cols.length / 2), midR = Math.floor(rows.length / 2);
-    rows.forEach(function (rw, ri) {
-      cols.forEach(function (cl, ci) {
-        var x0 = cl[0], y0 = rw[0], bw = cl[1], bh = rw[1];
-        if (ri === midR && ci === midC + 1) { storage(c, x0, y0, bw, bh); return; }
-        if (ri === midR - 1 && ci === midC + 1) { substation(c, x0, y0, bw, bh); return; }
-        if (r() < .05) return;
-        panels(c, r, x0, y0, bw, bh, pitch, depth);
-      });
-    });
-    c.restore();
-
-    var v = c.createLinearGradient(0, 0, 0, h);
-    v.addColorStop(0, 'rgba(255, 255, 255, .06)');
-    v.addColorStop(1, 'rgba(40, 30, 15, .10)');
-    c.fillStyle = v; c.fillRect(0, 0, w, h);
-  }
-
-  draw();
-  var pending = 0, lastW = wrap.clientWidth;
-  window.addEventListener('resize', function () {
-    if (pending) return;
-    pending = requestAnimationFrame(function () {
-      pending = 0;
-      if (wrap.clientWidth !== lastW) { lastW = wrap.clientWidth; draw(); }
-    });
   });
 })();
 </script>
