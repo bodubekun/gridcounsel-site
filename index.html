@@ -176,17 +176,34 @@ ins { color: var(--accent); text-decoration: underline double; text-underline-of
 
 /* Steps */
 .steps {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2rem;
   max-width: 60rem; margin-inline: auto;
   text-align: center;
 }
-.steps li { display: flex; flex-direction: column; align-items: center; gap: .35rem; min-width: 0; }
-.step-n { font-family: var(--f-serif); font-size: 1.6rem; line-height: 1; color: var(--accent); }
-.steps h3 { font-size: 1.05rem; font-weight: 600; margin-top: .4rem; }
-.steps p { color: var(--muted); font-size: .97rem; max-width: 16rem; }
-@media (max-width: 860px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem 2rem; } }
+.steps::before {
+  content: ""; position: absolute;
+  top: 1.45rem; height: 2px;
+  left: calc((100% - 6rem) / 8); right: calc((100% - 6rem) / 8);
+  background: var(--accent); opacity: .35;
+}
+.steps li { position: relative; display: flex; flex-direction: column; align-items: center; gap: .4rem; min-width: 0; }
+.step-n {
+  display: grid; place-items: center;
+  width: 2.9rem; height: 2.9rem; border-radius: 50%;
+  background: var(--accent); color: var(--on-accent);
+  font-family: var(--f-serif); font-weight: 600; font-size: 1.25rem; line-height: 1;
+  box-shadow: 0 0 0 7px var(--soft);
+  margin-bottom: .55rem;
+}
+.steps h3 { font-family: var(--f-serif); font-size: 1.2rem; font-weight: 600; line-height: 1.3; }
+.steps p { color: var(--muted); font-size: .98rem; max-width: 16rem; }
+@media (max-width: 860px) {
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 2rem; }
+  .steps::before { display: none; }
+}
 @media (max-width: 500px) { .steps { grid-template-columns: minmax(0, 1fr); } }
 
 /* Beyond */
@@ -237,8 +254,8 @@ ins { color: var(--accent); text-decoration: underline double; text-underline-of
 
   <section class="pitch">
     <div class="wrap pitch-inner">
-      <h1>Routine project contracts, marked up from the developer's side.</h1>
-      <p class="sub">We review the agreements that pile up between site control and notice to proceed. Options and leases, easements, NDAs, consultant agreements. You get a redline and an issues list, and an attorney in our network signs off on every markup.</p>
+      <h1>Routine project contracts, marked up from the developer’s side.</h1>
+      <p class="sub">We review the agreements that pile up between site control and NTP. Options and leases, easements, NDAs, consultant agreements. You get a redline and an issues list, and an attorney in our network signs off on every markup.</p>
       <div class="actions">
         <a class="btn" href="#contact">Start a review</a>
         <a href="#sample">See a sample markup</a>
@@ -260,12 +277,12 @@ ins { color: var(--accent); text-decoration: underline double; text-underline-of
         </div>
         <p class="cl cl-1"><span class="sec-ref">2.1&ensp;Option Term.</span> The Option shall expire three (3) years after the Effective Date<ins>, subject to two (2) extensions of one (1) year each upon written notice to Owner and payment of the Extension Fee</ins>.<sup class="mark">1</sup></p>
         <p class="note note-1"><b>Note 1</b>Interconnection studies routinely run past three years. Build the extensions in now.</p>
-        <p class="cl cl-2"><span class="sec-ref">9.3&ensp;Assignment.</span> Optionee shall not assign this Agreement without Owner's prior written consent, which <del>may be withheld in Owner's sole discretion</del> <ins>shall not be unreasonably withheld, conditioned or delayed; provided that no consent is required for an assignment to an Affiliate of Optionee or a collateral assignment to any Financing Party</ins>.<sup class="mark">2</sup></p>
-        <p class="note note-2"><b>Note 2</b>Lenders and tax equity investors will generally prefer a collateral assignment that doesn't need landowner consent.</p>
+        <p class="cl cl-2"><span class="sec-ref">9.3&ensp;Assignment.</span> Optionee shall not assign this Agreement without Owner’s prior written consent, which <del>may be withheld in Owner’s sole discretion</del> <ins>shall not be unreasonably withheld, conditioned or delayed; provided that no consent is required for an assignment to an Affiliate of Optionee or a collateral assignment to any Financing Party</ins>.<sup class="mark">2</sup></p>
+        <p class="note note-2"><b>Note 2</b>Lenders and tax equity investors will generally prefer a collateral assignment that doesn’t need landowner consent.</p>
         <div class="issues">
           <p class="issues-title">Issues list</p>
           <ul>
-            <li><span class="sev high">High</span><span>Assignment requires consent in Owner's sole discretion</span><span class="ref">&sect; 9.3</span></li>
+            <li><span class="sev high">High</span><span>Assignment requires consent in Owner’s sole discretion</span><span class="ref">&sect; 9.3</span></li>
             <li><span class="sev med">Medium</span><span>No extension right on a three-year option term</span><span class="ref">&sect; 2.1</span></li>
             <li><span class="sev med">Medium</span><span>Decommissioning security due in full at COD</span><span class="ref">&sect; 14.2</span></li>
           </ul>
@@ -278,7 +295,7 @@ ins { color: var(--accent); text-decoration: underline double; text-underline-of
     <div class="wrap">
       <div class="section-head">
         <h2>What we review</h2>
-        <p>Most of these agreements outlast the project's first owner, and every one of them gets read again in diligence.</p>
+        <p>Most of these agreements outlast the project’s first owner, and every one of them gets read again in diligence.</p>
       </div>
       <dl class="defs">
         <div><dt>Option and lease agreements</dt><dd>Option terms and extensions, rent and escalators, decommissioning security, assignment to financing parties.</dd></div>
