@@ -228,6 +228,19 @@ ins { color: var(--accent); text-decoration: underline double; text-underline-of
 .foot-inner { display: flex; flex-direction: column; align-items: center; gap: .55rem; text-align: center; }
 .foot-inner p { max-width: 44rem; }
 .adv { font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); font-size: .72rem; }
+.follow { margin-bottom: 1.1rem; }
+.btn-outline {
+  display: inline-block;
+  padding: .75rem 1.4rem;
+  border: 1.5px solid var(--accent); border-radius: 2px;
+  color: var(--accent); background: transparent;
+  font: 600 .82rem/1.2 var(--f-text);
+  letter-spacing: .12em; text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color .15s ease, color .15s ease;
+}
+.btn-outline:hover { background: var(--accent); color: var(--on-accent); }
+@media (prefers-reduced-motion: reduce) { .btn-outline { transition: none; } }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -350,6 +363,7 @@ ins { color: var(--accent); text-decoration: underline double; text-underline-of
 
 <footer class="site-foot">
   <div class="wrap foot-inner">
+    <p class="follow"><a class="btn-outline" href="https://www.linkedin.com/company/gridcounselai/" target="_blank" rel="noopener">Follow us on LinkedIn</a></p>
     <p class="adv">Attorney Advertising</p>
     <p>Grid Counsel AI is a technology platform, not a law firm. Legal services are provided by independent, licensed attorneys in the Grid Counsel AI attorney network, each admitted in the jurisdictions identified in their engagement letter. Contacting Grid Counsel AI or sending a document does not create an attorney-client relationship; an engagement begins only when you and the reviewing attorney sign an engagement letter.</p>
     <p>&copy; 2026 Grid Counsel AI &middot; Header photo: Jesse Pluim, U.S. Bureau of Land Management (public domain)</p>
